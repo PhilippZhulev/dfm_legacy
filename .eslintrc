@@ -1,0 +1,171 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:makestyles/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:prettier/recommended",
+    "airbnb-base",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "jest-enzyme"
+  ],
+  "env": {
+    "jest": true,
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "__DEV__": true,
+    "__PROD__": true,
+    "__DEBUG__": true,
+    "__COVERAGE__": true,
+    "__BASENAME__": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  },
+  "plugins": ["babel", "react", "prettier", "promise", "sonarjs", "jss", "makestyles"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "js": true
+    }
+  },
+  "rules": {
+    "react/require-default-props": "off",
+    "import/named": "off",
+    "camelcase": "error",
+    "react/forbid-prop-types": 0,
+    "react/default-props-match-prop-types": 0,
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "prettier/prettier": ["error"],
+    "react/no-find-dom-node": "off",
+    "react/no-did-mount-set-state": "off",
+    "react/no-unused-prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "no-unused-vars": "off",
+    "func-names": "error",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "error",
+    "no-use-before-define": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "babel/no-unused-expressions": "error",
+    "curly": "error",
+    "global-require": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "promise/always-return": "error",
+    "promise/no-return-wrap": "error",
+    "no-return-assign": ["error", "except-parens"],
+    "no-lonely-if": "error",
+    "promise/param-names": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off",
+    "promise/no-nesting": "warn",
+    "promise/no-promise-in-callback": "warn",
+    "promise/no-callback-in-promise": "warn",
+    "semi": ["error", "always"],
+    "promise/avoid-new": "off",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "warn",
+    "promise/valid-params": "warn",
+    "sonarjs/cognitive-complexity": ["error", 30],
+    "sonarjs/no-identical-expressions": "error",
+    "max-lines": [
+      "error",
+      {
+        "max": 320,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "max-params": ["error", 4],
+    "max-nested-callbacks": ["error", 3],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "sonarjs/no-duplicate-string": ["error", 5],
+    "eqeqeq": ["error", "always"],
+    "react/prop-types": [
+      2,
+      {
+        "skipUndeclared": true
+      }
+    ],
+    "comma-spacing": "off",
+    "implicit-arrow-linebreak": "off",
+    "valid-typeof": [
+      "error",
+      {
+        "requireStringLiterals": false
+      }
+    ],
+    "max-len": ["error", {
+      "code": 100,
+      "ignoreComments": true,
+      "ignoreStrings": true,
+      "tabWidth": 2,
+      "ignoreRegExpLiterals": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreUrls": true
+    }],
+    "indent": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": ["error", "after", {
+      "overrides": {
+        "?": "ignore",
+        ":": "ignore"
+      }
+    }],
+    "function-paren-newline": "off",
+    "makestyles/makestyles-with-name": "off"
+    // "require-jsdoc": ["warn", {
+    //   "require": {
+    //     "FunctionDeclaration": true,
+    //     "MethodDefinition": true,
+    //     "ClassDeclaration": true,
+    //     "ArrowFunctionExpression": true,
+    //     "FunctionExpression": true
+    //   }
+    // }]
+  }
+}

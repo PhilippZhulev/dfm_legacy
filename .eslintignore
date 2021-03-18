@@ -1,0 +1,9 @@
+/.git
+/.vscode
+/src/logger.js
+node_modules
+src/serviceWorker.js
+*.stories.js
+src/lib/D3Nodes.js
+*.mock.js
+/private
